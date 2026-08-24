@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+  --color-brand-offwhite: #f9f9f9;
+  --color-brand-accent: #1a1a1a;
+}
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+  
+  body {
+    @apply bg-brand-white text-brand-black font-sans leading-relaxed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif uppercase tracking-[0.2em];
+  }
+}
+
+.luxury-link {
+  @apply relative inline-block transition-colors duration-300;
+}
+
+.luxury-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-current transition-all duration-300;
+}
+
+.luxury-link:hover::after {
+  @apply w-full;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-offwhite;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-accent rounded-full;
+}
