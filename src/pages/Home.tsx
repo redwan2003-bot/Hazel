@@ -46,7 +46,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
                     <div className="w-full md:w-1/2 relative group overflow-hidden bg-brand-offwhite">
                         <img
-                            src="/banner_2.jpg"
+                            src="/bag9.jpg"
                             alt="The Artisan Narrative"
                             className="w-full h-[60vh] object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000"
                         />
